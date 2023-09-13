@@ -7,7 +7,7 @@ import { download } from "./download.js"
 const app = express()
 app.use(cors())
 
-//criando a rota summary e recuperando o ID do vídeo
+//criando a rota que recupera o ID do vídeo e usa a função que realiza o download
 app.get('/summary/:id', (req, res) => {
   download(req.params.id)
   res.json({ result: "Download do vídeo realizado com sucesso!"})
