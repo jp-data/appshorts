@@ -5,7 +5,7 @@ const content = document.querySelector("#content")
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault()
-  console.log("Dados enviados")
+  content.classList.add("placeholder")
 
   const videoURL = input.value
   
