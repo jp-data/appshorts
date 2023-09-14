@@ -1,2 +1,4 @@
 # appshorts
-Shorts generator with IA
+
+Shorts summary generator with IA
+
