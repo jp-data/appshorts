@@ -27,4 +27,5 @@ form.addEventListener("submit", async (e) => {
   })
 
   content.textContent = summary.data.result
+  content.classList.remove("placeholder")
 })
