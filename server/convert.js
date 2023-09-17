@@ -36,7 +36,7 @@ export const convert = () => new Promise ((resolve, reject) => {
     // captando o áudio no índice 0
     const audioData = fileDecoded.channelData[0]
     // convertendo no formato que a I.A utiliza
-    const floatArray = new float32Array(audioData)
+    const floatArray = new Float32Array(audioData)
 
     console.log("Vídeo convertido com sucesso")
 
@@ -46,7 +46,7 @@ export const convert = () => new Promise ((resolve, reject) => {
   })
   // captando erro
   .on("error", (error) => {
-    console.log("Erro ao converte vídeo", error)
+    console.log("Erro ao converter vídeo", error)
     reject(error)
   })
   // caso não haja erro, salva o arquivo

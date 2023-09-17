@@ -5,7 +5,7 @@ import express from 'express'
 import { convert } from "./convert.js"
 import { download } from "./download.js"
 import { transcribe } from "./transcribe.js"
-import { summarize } from "./summarize.js" 
+import { summarize } from "./summarize.js"
 
 const app = express()
 app.use(express.json())
@@ -19,7 +19,6 @@ app.get('/summary/:id', async(req, res) => {
   await download(req.params.id)
   // conversão do vídeo
   const audioConverted = await convert()
-  console.log(audioConverted)
   // transcrevendo o áudio convertido
   const result = await transcribe(audioConverted) 
 
