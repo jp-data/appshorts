@@ -31,7 +31,7 @@ app.get('/summary/:id', async(req, res) => {
 
 // rota que recupera a URL do vídeo no forms
 app.post("/summary", async (req, res) => {
-  try{
+  try {
   const result = await summarize(req.body.text)
   return res.json({ result })
   } catch(error){

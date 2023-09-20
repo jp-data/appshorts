@@ -8,9 +8,9 @@ export async function transcribe(audio) {
   // aplicando o modelo no áudio convertido
   try {
     console.log("Realizando a transcrição")
-    const transcribe = await pipeline
-    ("automatic-speech-recognition",
-     "xenova/whisper-small")
+
+    const transcribe = await pipeline("automatic-speech-recognition",
+     "Xenova/whisper-small")
 
      const transcription = await transcribe(audio, {
       //dividindo o conteúdo e definindo a tarefa do modelo
